@@ -18,7 +18,22 @@ patients = [
 
 # Create a DataFrame
 df_patients = pd.DataFrame(patients)
+def add_bg_from_url(image_url):
+    st.markdown(
+         f"""
+         <style>
+         .stApp {{
+             background-image: url({https://media.istockphoto.com/id/1327568875/photo/healthcare-business-graph-data-and-growth-insurance-healthcare-doctor-analyzing-medical-of.jpg?s=612x612&w=0&k=20&c=R4idIeTPq0f1TPSJwAq4KUeLUQg6ul8eIBSjvs9MXQk=});
+             background-size: cover;
+         }}
+         </style>
+         """,
+         unsafe_allow_html=True
+     )
+    
 
+# Add background image
+add_bg_from_url("https://media.istockphoto.com/id/1327568875/photo/healthcare-business-graph-data-and-growth-insurance-healthcare-doctor-analyzing-medical-of.jpg?s=612x612&w=0&k=20&c=R4idIeTPq0f1TPSJwAq4KUeLUQg6ul8eIBSjvs9MXQk=") 
 st.title('Patient Details Lookup')
 
 
